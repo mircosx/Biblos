@@ -104,7 +104,7 @@ function validacampo(formulario){
     for (i=0;i<frm.elements.length;i++){
         cajatexto = frm.elements[i];
         if ( cajatexto.className=="obligatorio" && cajatexto.value==""){
-            cajatexto.style.backgroundColor='#FFFF00';
+            //cajatexto.style.backgroundColor='#FFFF00';
             cajatexto.style.borderColor='#ff0000';
             
             errorcamp="Debe rellenar todos los campos con *"
@@ -115,45 +115,45 @@ function validacampo(formulario){
             }
         }
         //else{
-          //  if (!reac.test(cajatexto.value)) {
-            //    cajatexto.style.backgroundColor='#FFFF00';
-              //  cajatexto.style.borderColor='#ff0000';
-              //  errorcamp="Ha introducido caracteres no validos";
-                //if(errorcamp){
-                  //  errorm=errorm+" "+errorcamp;
-                //}else {
-                  //  errorm=errorcamp;
-               // }
-                //cajatexto.value = cajatexto.value.replace (A-z0-9-'.'-','-'-'-'('-')');
-                //if(poscursor==true){
-                   // cajatexto.focus();
-                    //poscursor=false;
-                //}
-            //}
+        //  if (!reac.test(cajatexto.value)) {
+        //    cajatexto.style.backgroundColor='#FFFF00';
+        //  cajatexto.style.borderColor='#ff0000';
+        //  errorcamp="Ha introducido caracteres no validos";
+        //if(errorcamp){
+        //  errorm=errorm+" "+errorcamp;
+        //}else {
+        //  errorm=errorcamp;
+        // }
+        //cajatexto.value = cajatexto.value.replace (A-z0-9-'.'-','-'-'-'('-')');
+        //if(poscursor==true){
+        // cajatexto.focus();
+        //poscursor=false;
+        //}
+        //}
             
-            //else {
-              //  if (cajatexto.className=="numerico" && !ren.test(cajatexto.value)) {
-              //      cajatexto.style.backgroundColor='#FFFF00';
-              //      cajatexto.style.borderColor='#ff0000';
-              //      errorcamp="Ha introducido caracteres no validos";
-              //      if(errorcamp){
-                 //       errorm=errorm+" "+errorcamp;
-              //      }else {
-              //          errorm=errorcamp;
-              //      }
-              //      cajatexto.value = cajatexto.value.replace(0-9);
-              //      if(poscursor==true){
-              //          cajatexto.focus();
-              //          poscursor=false;
-              //      }
-              //  }
-                else
-                {
-                    cajatexto.style.backgroundColor='';
-                    cajatexto.style.borderColor='';
-                }
-         //   }
-      //  }
+        //else {
+        //  if (cajatexto.className=="numerico" && !ren.test(cajatexto.value)) {
+        //      cajatexto.style.backgroundColor='#FFFF00';
+        //      cajatexto.style.borderColor='#ff0000';
+        //      errorcamp="Ha introducido caracteres no validos";
+        //      if(errorcamp){
+        //       errorm=errorm+" "+errorcamp;
+        //      }else {
+        //          errorm=errorcamp;
+        //      }
+        //      cajatexto.value = cajatexto.value.replace(0-9);
+        //      if(poscursor==true){
+        //          cajatexto.focus();
+        //          poscursor=false;
+        //      }
+        //  }
+        else
+        {
+            cajatexto.style.backgroundColor='';
+            cajatexto.style.borderColor='';
+        }
+    //   }
+    //  }
     }    
     if(poscursor==false){
         alert (errorm);
@@ -165,83 +165,67 @@ function validacampo(formulario){
     }    
 }
 
-    function solonumero(myfield, e, dec)
+function solonumero(myfield, e, dec)
 {
-var key;
-var keychar;
+    var key;
+    var keychar;
 
-if (window.event)
-   key = window.event.keyCode;
-else if (e)
-   key = e.which;
-else
-   return true;
-keychar = String.fromCharCode(key);
-
-
-if ((key==null) || (key==0) || (key==8) || 
-    (key==9) || (key==13) || (key==27) )
-   return true;
+    if (window.event)
+        key = window.event.keyCode;
+    else if (e)
+        key = e.which;
+    else
+        return true;
+    keychar = String.fromCharCode(key);
 
 
-else if ((("0123456789").indexOf(keychar) > -1))
-   return true;
+    if ((key==null) || (key==0) || (key==8) || 
+        (key==9) || (key==13) || (key==27) )
+        return true;
 
 
-else if (dec && (keychar == "."))
-   {
-   myfield.form.elements[dec].focus();
-   return false;
-   }
-else
-   return false;
+    else if ((("0123456789").indexOf(keychar) > -1))
+        return true;
+
+
+    else if (dec && (keychar == "."))
+    {
+        myfield.form.elements[dec].focus();
+        return false;
+    }
+    else
+        return false;
     
 }
-    function no_caracter_esp(myfield, e, dec)
+function no_caracter_esp(myfield, e, dec)
 {
-var key;
-var keychar;
+    var key;
+    var keychar;
 
-if (window.event)
-   key = window.event.keyCode;
-else if (e)
-   key = e.which;
-else
-   return true;
-keychar = String.fromCharCode(key);
-
-
-if ((key==null) || (key==0) || (key==8) || 
-    (key==9) || (key==13) || (key==27) )
-   return true;
+    if (window.event)
+        key = window.event.keyCode;
+    else if (e)
+        key = e.which;
+    else
+        return true;
+    keychar = String.fromCharCode(key);
 
 
-else if ((("0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ-'-'-'('-')'-'.'-','-'-'").indexOf(keychar) > -1))
-   return true;
+    if ((key==null) || (key==0) || (key==8) || 
+        (key==9) || (key==13) || (key==27) )
+        return true;
 
 
-else if (dec && (keychar == "."))
-   {
-   myfield.form.elements[dec].focus();
-   return false;
-   }
-else
-   return false;
+    else if ((("0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ-'-'-'('-')'-'.'-','-'-'").indexOf(keychar) > -1))
+        return true;
+
+
+    else if (dec && (keychar == "."))
+    {
+        myfield.form.elements[dec].focus();
+        return false;
+    }
+    else
+        return false;
     
 }
-
-$(function() {
-            var offset = $("#scroll").offset();
-            var topPadding = 15;
-            $(window).scroll(function() {
-                if ($("#scroll").height() < $(window).height() && $(window).scrollTop() > offset.top) { /* LINEA MODIFICADA POR ALEX PARA NO ANIMAR SI EL SIDEBAR ES MAYOR AL TAMAÑO DE PANTALLA */
-                    $("#scroll").stop().animate({
-                        marginTop: $(window).scrollTop() - offset.top + topPadding
-                    });
-                } else {
-                    $("#scroll").stop().animate({
-                        marginTop: 0
-                    });
-                };
-            });
-        });

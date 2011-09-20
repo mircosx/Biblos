@@ -18,9 +18,6 @@ conexion();
             <?php include "menucss.php"; ?>
         </div> 
         <?php
-        $mipagina = $_SERVER['PHP_SELF'];
-        $usuario = $_SESSION['usuario'];
-        $dni = $_SESSION['dni'];
 
         if (isset($_POST['filtracion'])) {
             $filtracion = trim($_POST['filtracion']);
@@ -39,15 +36,15 @@ conexion();
         switch ($filtracion) {
             case 1:
                 $_SESSION['filtro']="autor";
-                include "fichaLibroAutor.php";
+                layoutFormLibro($filtracion,'#','sinboton');
                 break;
             case 2:
                 $_SESSION['filtro']="titulo";
-                include "fichaLibroTitulo.php";
+                layoutFormLibro($filtracion,'#','sinboton');
                 break;
             case 3:
                 $_SESSION['filtro']="categoria";
-                include "fichaLibroCategoria.php";
+                layoutFormLibro($filtracion,'#','sinboton');
                 break;
         }
         ?>

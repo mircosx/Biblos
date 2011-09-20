@@ -7,7 +7,8 @@
     </head>
     <body>
         <?php
-        include "funciones.php";
+        include "funciones/mini.php";
+        include "funciones/datos.php";
         conexion();
 
         $usuario = trim($_POST['nombre_usuario']);
@@ -25,6 +26,7 @@
             $_SESSION['dni']=$dni;
             $_SESSION['tipousuario']=$tipousuario;
             $_SESSION['css']=$plantilla_usuario;
+            $_SESSION['menu']="GEN";
             echo header("location: menuG.php");
         }
         ?>

@@ -1,8 +1,8 @@
 <?php
-$servername='localhost';     // Your MySql Server Name or IP address here
-$dbusername='root';                // Login user id here
-$dbpassword='mircosx';                // Login password here
-$dbname='biblos_g2';     // Your database name here
+$servername=$_POST;
+$dbusername=$_POST;
+$dbpassword=$_POST;
+$dbname=$_POST;
 
 connecttodb($servername,$dbname,$dbusername,$dbpassword);
 function connecttodb($servername,$dbname,$dbuser,$dbpassword)

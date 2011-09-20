@@ -280,6 +280,7 @@ A:hover {text-decoration:underline;}
     display:block;
     color:#00bfff;
     background-color: #fff;
+    
 }
 
 #menu_usuarios :hover{
@@ -293,7 +294,7 @@ A:hover {text-decoration:underline;}
     left:0;
     height: 20px;    
     width: 100%;
-    font-size: small;
+    font-variant: small-caps;
     display: block;
     color: black;
     background-color: #00BFFF;

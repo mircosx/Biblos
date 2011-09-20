@@ -12,9 +12,9 @@
                 <div id="cabecera">
                     <strong>Biblos</strong> Login </div>
                 <div id="user">
-                    <input class="input" name="nombre_usuario" onblur="if (value =='') {value = 'Usuario'}" onfocus="if (value == 'Usuario') {value =''}" type="text" value="Usuario" onKeyPress="return solonumero(this,event);"/></div>
+                    <input class="input" name="nombre_usuario" onblur="if (value =='') {value = 'Usuario'}" onfocus="if (value == 'Usuario') {value =''}" type="text" value="Usuario" onKeyPress="return solonumero(this,event);"  maxlength="8"/></div>
                 <div id="pw">
-                    <input class="input" name="password" onblur="if (value =='') {value = '123456'}" onfocus="if (value == '123456') {value =''}" type="password" value="123456" /></div>
+                    <input class="input" name="password" onblur="if (value =='') {value = '123456'}" onfocus="if (value == '123456') {value =''}" type="password" value="123456" maxlength="8" /></div>
                 <div id="alinea">
                     <div id="enviar">
                         <input class="login" name="Submit1" type="submit" value="" /></div>
@@ -25,12 +25,12 @@
                     <div id="new">
                         <span>*</span> <a href="registroG.php">Nuevo usuario</a></div>
                 </div>
-            
+
                 <div id="error">
-            <?php
-            if (isset($_GET['error']))
-                echo $_GET['error'];
-            ?>
+                    <?php
+                    if (isset($_GET['error']))
+                        echo $_GET['error'];
+                    ?>
                 </div>
             </form>
         </div>

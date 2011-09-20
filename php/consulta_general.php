@@ -12,7 +12,7 @@
         
         <?php 
             include "menucss.php";
-            include "fichaLibroGenerica.php";
+            layoutFormLibro('#', 'post', 'sinboton');
         ?>
         
         <div class="filtros">
